@@ -1,0 +1,10 @@
+.App{background: rgb(237, 229, 237);
+display: grid;
+width: 100%;
+height: 100vh;
+grid-template-rows: 200px 10fr;
+grid-template-columns: 300px 10fr;
+grid-template-areas:" h h" 
+                     "n c";
+
+}

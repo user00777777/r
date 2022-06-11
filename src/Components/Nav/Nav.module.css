@@ -1,0 +1,8 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Amatic+SC&family=Lavishly+Yours&family=Pacifico&family=Shadows+Into+Light&family=Square+Peg&display=swap');
+.wrapper{grid-area:n ;background: -webkit-linear-gradient(top, #d5cea6 0%,#c9c190 40%,#b7ad70 100%); /* Chrome10-25,Safari5.1-6 */
+display: flex;flex-direction: column;font-size: 29px;color:indigo;
+font-family: 'Akshar', sans-serif;text-transform: capitalize;
+}
+.wrap{height: 1000px ;}
