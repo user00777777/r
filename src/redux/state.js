@@ -20,7 +20,7 @@ let store = {
   _state: {
     messageses: {
       ansver: [
-        { a: "Hi" },
+        { a: "Hi ЧУВАК" },
         { a: "How are you" },
         { a: "Hello" },
         { a: "Good day" },
