@@ -34,7 +34,7 @@ let Message = (props) => {
       </div>
       <div>
         <button onClick={addMessage} id="btn">
-          нажимусцц
+          push
         </button>
       </div>
     </div>
