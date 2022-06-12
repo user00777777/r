@@ -16,7 +16,7 @@ function App(props) {
       <Header />
       <Nav />
       <Routes>
-        <Route path="/Profile" element={<PContainer />} />
+        <Route path="/Profile" element={<PContainer store={props.store} />} />
         <Route path="/Content" element={<Content />} />
         <Route path="/Header" element={<News />} />
         <Route path="/New" element={<New />} />
