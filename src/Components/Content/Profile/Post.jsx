@@ -1,5 +1,4 @@
 import React from "react";
-import { addPostActionCreator, updateNewPostTextCreator } from "../../../redux/posts-reduser";
 import Posts from "./Posts";
 import s from  "./Profile.module.css";
 
@@ -9,14 +8,10 @@ let Post=(props)=>{
 
      let p=props.post.map((el)=><Posts message={el.message} liceCount={el.liceCount}/>)
 //let newPostElement= React.createRef()
-let addPost=()=>{props.dispatch(addPostActionCreator())}
+let addPost=()=>{props.addPost()}
 let onPostChange=(event)=>{  
   let text=event.target.value        //newPostElement.current.value
-let action=updateNewPostTextCreator(text)
-   
- 
-    props.dispatch(action)
-}
+onPostChange(text)}
 
 
 
