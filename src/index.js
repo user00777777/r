@@ -26,4 +26,7 @@ let rend = (state) => {
 };
 rend(store.getState());
 reportWebVitals();
-store.subscribe(rend);
+store.subscribe(() => {
+  let state = store.getState();
+  rend(state);
+});
