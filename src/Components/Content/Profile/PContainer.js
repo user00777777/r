@@ -15,7 +15,7 @@ const PContainer = (props) => {
 
   return (
     <Post
-      addPost={addPost}
+      onAddPost={addPost}
       onPostChange={onPostChange}
       post={props.store.getState().posts.post}
     />
