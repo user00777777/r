@@ -1,6 +1,16 @@
 const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
 const ADD_POST = "ADD-POST";
-const postsReduser = (state, action) => {
+let initialState = {
+  post: [
+    { id: 1, message: "привет", likeCount: 1 },
+    { id: 2, message: "hi", likeCount: 12 },
+    { id: 3, message: "Hello", likeCount: 13 },
+    { id: 4, message: "Goodmorning", likeCount: 14 },
+  ],
+  newPostText: " ",
+};
+
+const postsReduser = (state = initialState, action) => {
   switch (action.type) {
     case ADD_POST:
       let tex = state.newPostText;

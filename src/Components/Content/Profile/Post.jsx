@@ -8,10 +8,10 @@ let Post=(props)=>{
 
 
      let p=props.post.map((el)=><Posts message={el.message} liceCount={el.liceCount}/>)
-let newPostElement=React.createRef()
+//let newPostElement= React.createRef()
 let addPost=()=>{props.dispatch(addPostActionCreator())}
-let onPostChange=()=>{  
-  let text=newPostElement.current.value
+let onPostChange=(event)=>{  
+  let text=event.target.value        //newPostElement.current.value
 let action=updateNewPostTextCreator(text)
    
  
@@ -22,7 +22,7 @@ let action=updateNewPostTextCreator(text)
 
 return<div>
     <div className={s.i}>
-     <div><textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText}/></div>
+     <div><textarea onChange={onPostChange} value={props.newPostText}/></div>
      <button onClick={addPost} >Нажми</button>
        
  <div className={s.pr}>

@@ -1,6 +1,21 @@
 const SEND_MESSAGE = "SEND_MESSAGE";
 const UPDATE_NEW_MESSAGE = "UPDATE-NEW-MESSAGE";
-const messagesesReduser = (state, action) => {
+let initialState = {
+  ansver: [
+    { a: "Hi ЧУВАК" },
+    { a: "How are you" },
+    { a: "Hello" },
+    { a: "Good day" },
+  ],
+  message: [
+    { name: "Тригуб", id: 1 },
+    { name: "Самбур", id: 2 },
+    { name: "Петриченко", id: 3 },
+    { name: "Бондаренко", id: 4 },
+  ],
+  newMessageBody: " ",
+};
+const messagesesReduser = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_NEW_MESSAGE:
       state.newMessageBody = action.body;
