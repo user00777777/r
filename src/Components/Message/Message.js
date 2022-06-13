@@ -10,6 +10,7 @@ let Message = (props) => {
     props.messageChange(body); //props.store.dispatch(updateNewMessageCreator(body));
   };
   let addMessage = () => {
+    debugger;
     props.addMessage(); // props.store.dispatch(addMessageCreator());
   };
   let id = props.messageses.message.map((el) => {

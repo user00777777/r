@@ -40,7 +40,7 @@ let store = {
         { id: 3, message: "Hello", likeCount: 13 },
         { id: 4, message: "Goodmorning", likeCount: 14 },
       ],
-      newPostText: " ",
+      newPostText: " f",
     },
   },
   _calls() {

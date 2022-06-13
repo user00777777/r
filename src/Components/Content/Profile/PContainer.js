@@ -5,6 +5,7 @@ import {
 import Post from "./Post";
 
 const PContainer = (props) => {
+  let newPostText = props.store.getState().posts.newPostText;
   let addPost = () => {
     props.store.dispatch(addPostActionCreator());
   };
@@ -18,6 +19,7 @@ const PContainer = (props) => {
       onAddPost={addPost}
       onPostChange={onPostChange}
       post={props.store.getState().posts.post}
+      newPostText={newPostText}
     />
   );
 };
