@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 
 import { BrowserRouter } from "react-router-dom";
 import store from "./redux/store";
+import StoreContext from "./StoreContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -15,11 +16,13 @@ let rend = (state) => {
     <React.StrictMode>
       <BrowserRouter>
         {" "}
-        <App
-          state={state}
-          dispatch={store.dispatch.bind(store)}
-          store={store}
-        />
+        <StoreContext.Provider value={store}>
+          <App
+          // state={state}
+          // dispatch={store.dispatch.bind(store)}
+          // store={store}
+          />
+        </StoreContext.Provider>
       </BrowserRouter>
     </React.StrictMode>
   );

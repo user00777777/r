@@ -2,25 +2,32 @@ import {
   addPostActionCreator,
   updateNewPostTextCreator,
 } from "../../../redux/posts-reduser";
+import StoreContext from "../../../StoreContext";
 import Post from "./Post";
 
-const PContainer = (props) => {
-  let newPostText = props.store.getState().posts.newPostText;
-  let addPost = () => {
-    props.store.dispatch(addPostActionCreator());
-  };
-  let onPostChange = (text) => {
-    let action = updateNewPostTextCreator(text);
-    props.store.dispatch(action);
-  };
-
+const PContainer = () => {
   return (
-    <Post
-      onAddPost={addPost}
-      onPostChange={onPostChange}
-      post={props.store.getState().posts.post}
-      newPostText={newPostText}
-    />
+    <StoreContext.Consumer>
+      {(store) => {
+        let newPostText = store.getState().posts.newPostText;
+        let addPost = () => {
+          store.dispatch(addPostActionCreator());
+        };
+        let onPostChange = (text) => {
+          let action = updateNewPostTextCreator(text);
+          store.dispatch(action);
+        };
+
+        return (
+          <Post
+            onAddPost={addPost}
+            onPostChange={onPostChange}
+            post={store.getState().posts.post}
+            newPostText={newPostText}
+          />
+        );
+      }}
+    </StoreContext.Consumer>
   );
 };
 export default PContainer;
