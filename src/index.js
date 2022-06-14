@@ -11,7 +11,7 @@ import StoreContext from "./StoreContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-let rend = (state) => {
+let rend = () => {
   root.render(
     <React.StrictMode>
       <BrowserRouter>
@@ -27,9 +27,8 @@ let rend = (state) => {
     </React.StrictMode>
   );
 };
-rend(store.getState());
+rend();
 reportWebVitals();
 store.subscribe(() => {
-  let state = store.getState();
-  rend(state);
+  rend();
 });
