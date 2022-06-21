@@ -7,4 +7,5 @@ let redusers = combineReducers({
   messageses: postsReduser,
 });
 let store = legacy_createStore(redusers);
+window.store = store;
 export default store;
