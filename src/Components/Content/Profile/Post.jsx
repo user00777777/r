@@ -2,7 +2,8 @@ import React from "react";
 import Posts from "./Posts";
 import s from  "./Profile.module.css";
 
-let Post=(props)=>{ 
+let Post=(props)=>{
+   debugger
   
 
 
