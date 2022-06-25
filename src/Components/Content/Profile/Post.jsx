@@ -1,24 +1,26 @@
+
 import React from "react";
 import Posts from "./Posts";
 import s from  "./Profile.module.css";
 
 let Post=(props)=>{
-   debugger
-  
+
+  let pos=props.posts
 
 
-     let p=props.post.map((el)=><Posts message={el.message} liceCount={el.liceCount}/>)
+     let p=pos.post.map((el)=><Posts message={el.message} key={el.id} liceCount={el.liceCount}/>)
 //let newPostElement= React.createRef()
 let addPost=()=>{props.onAddPost()}
 let postChange=(event)=>{  
-  let text=event.target.value        //newPostElement.current.value
+  let text=event.target.value  
+  console.log(text);      //newPostElement.current.value
 props.onPostChange(text)}
 
 
 
 return<div>
     <div className={s.i}>
-     <div><textarea onChange={postChange} value={props.newPostText}/></div>
+     <div><textarea onChange={postChange} value={pos.newPostText}/></div>
      <button onClick={addPost} >Нажми</button>
        
  <div className={s.pr}>

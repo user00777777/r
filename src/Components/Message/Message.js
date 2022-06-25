@@ -7,14 +7,13 @@ let Message = (props) => {
 
   let messageChange = (event) => {
     let body = event.target.value;
-    props.messageChange(body); //props.store.dispatch(updateNewMessageCreator(body));
+    props.onMessageChange(body); //props.store.dispatch(updateNewMessageCreator(body));
   };
   let addMessage = () => {
-    debugger;
-    props.addMessage(); // props.store.dispatch(addMessageCreator());
+    props.onAddMessage(); // props.store.dispatch(addMessageCreator());
   };
   let id = props.messageses.message.map((el) => {
-    return <Messages id={el.id} name={el.name} />;
+    return <Messages id={el.id} key={el.id} name={el.name} />;
   });
   let ansvers = props.messageses.ansver.map((an) => {
     return <Messages ans={an.a} />;

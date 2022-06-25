@@ -9,7 +9,7 @@ let Header = () => {
         className={s.s}
         src="https://cdn2.iconfinder.com/data/icons/black-man-professions-1/512/profession_avatar_man_people_user_professional_black_work_job-44-128.png"
         alt="foto"
-        srcset=""
+        srcSet=""
       />
     </div>
   );
