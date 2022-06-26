@@ -14,9 +14,6 @@ import postsReduser from "./posts-reduser";
 //   { name: "Бондаренко", id: 4 },
 // ];
 let store = {
-  getState() {
-    return this._state;
-  },
   _state: {
     messageses: {
       ansver: [
@@ -43,27 +40,22 @@ let store = {
       newPostText: " f",
     },
   },
+
   _calls() {
     console.log("привет");
+  },
+  getState() {
+    return this._state;
   },
 
   subscribe(observer) {
     this._calls = observer;
   },
   dispatch(action) {
-    // switch (action) {
-    //   case action.type === "ADD-POST":
-    //     let newPost = { id: 5, message: this._state.newPostText, likeCount: 0 };
-    //     this._state.post.push(newPost);
-    //     this._state.newPostText = "";
-    //     this._calls(this._state);
-    //     break;
-    //   case action.type === "UPDATE-NEW-POST-TEXT":
-    //     this._state.newPostText = action.postchange;
-    //     this._calls(this._state);
-    // }
+    debugger;
     this._state.messageses = messagesesReduser(this._state.messageses, action);
     this._state.posts = postsReduser(this._state.posts, action);
+
     this._calls(this._state);
   },
 };

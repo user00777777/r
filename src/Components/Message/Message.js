@@ -16,7 +16,7 @@ let Message = (props) => {
     return <Messages id={el.id} key={el.id} name={el.name} />;
   });
   let ansvers = props.messageses.ansver.map((an) => {
-    return <Messages ans={an.a} />;
+    return <Messages ans={an.a} key={an.id} />;
   });
 
   return (

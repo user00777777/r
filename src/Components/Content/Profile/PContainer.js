@@ -11,11 +11,13 @@ let mapStateProps = (state) => {
 };
 let mapDispatchProps = (dispatch) => {
   return {
-    onAddPost: () => dispatch(addPostActionCreator()),
+    onAddPost: () => {
+      dispatch(addPostActionCreator());
+    },
 
     onPostChange: (text) => {
-      let action = updateNewPostTextCreator(text);
-      dispatch(action);
+      dispatch(updateNewPostTextCreator(text));
+      console.log(text);
     },
   };
 };

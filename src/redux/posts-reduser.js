@@ -11,15 +11,28 @@ let initialState = {
 };
 
 const postsReduser = (state = initialState, action) => {
+  debugger;
   switch (action.type) {
-    case ADD_POST:
-      let tex = state.newPostText;
-      state.newPostText = "";
-      state.post.push({ message: tex });
-      return state;
+    case ADD_POST: {
+      // let tex = state.newPostText;
+      // state.newPostText = "";
+      // state.post.push({ message: tex });
+      let tex = {
+        id: 5,
+        message: state.newPostText,
+        likesCount: 0,
+      };
+      let stateCopy = { ...state };
+      stateCopy.post = [state.post];
+      stateCopy.post.push(tex);
+      stateCopy.newPostText = "";
+      return stateCopy;
+    }
     case UPDATE_NEW_POST_TEXT:
-      state.newPostText = action.text;
-      return state;
+      let stateCopy = { ...state };
+      stateCopy.post = [...state.post];
+      stateCopy.newPostText = action.text;
+      return stateCopy;
     default:
       return state;
   }
@@ -30,4 +43,5 @@ export const updateNewPostTextCreator = (text) => ({
   type: UPDATE_NEW_POST_TEXT,
   text: text,
 });
+
 export default postsReduser;
