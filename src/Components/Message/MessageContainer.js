@@ -5,9 +5,9 @@ import {
 import Message from "./Message";
 import { connect } from "react-redux";
 let mapStateToProps = (state) => {
+  debugger;
   return {
     messageses: state.messageses,
-    
   };
 };
 let mapDispatchToProps = (dispatch) => {

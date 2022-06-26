@@ -3,8 +3,8 @@ import messagesesReduser from "./messageses-reduser";
 import postsReduser from "./posts-reduser";
 
 let redusers = combineReducers({
-  posts: messagesesReduser,
-  messageses: postsReduser,
+  posts: postsReduser,
+  messageses: messagesesReduser,
 });
 let store = legacy_createStore(redusers);
 window.store = store;

@@ -6,8 +6,9 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import store from "./redux/store";
+
 import ReactDOM from "react-dom/client";
+import store from "./redux/redux-store";
 // import { StrictMode } from "react";
 // import { createRoot } from "react-dom/client";
 

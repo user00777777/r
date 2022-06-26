@@ -11,7 +11,6 @@ let initialState = {
 };
 
 const postsReduser = (state = initialState, action) => {
-  debugger;
   switch (action.type) {
     case ADD_POST: {
       // let tex = state.newPostText;
