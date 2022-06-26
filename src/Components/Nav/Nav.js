@@ -6,7 +6,7 @@ let Nav = () => {
     <div className={s.wrapper}>
       <Link to="/Profile">Profile</Link>
       <Link to="/Message">Message</Link>
-      <NavLink to="/Content">Content </NavLink>
+      <NavLink to="/Contents">Content </NavLink>
       <div>
         <Link to="/Header">News</Link>
       </div>
