@@ -21,17 +21,15 @@ const postsReduser = (state = initialState, action) => {
         message: state.newPostText,
         likesCount: 0,
       };
-      let stateCopy = { ...state };
-      stateCopy.post = [state.post];
-      stateCopy.post.push(tex);
-      stateCopy.newPostText = "";
-      return stateCopy;
+
+      return {
+        ...state,
+        post: [...state.post, tex],
+        newPostText: "",
+      };
     }
     case UPDATE_NEW_POST_TEXT:
-      let stateCopy = { ...state };
-      stateCopy.post = [...state.post];
-      stateCopy.newPostText = action.text;
-      return stateCopy;
+      return { ...state, newPostText: action.text };
     default:
       return state;
   }

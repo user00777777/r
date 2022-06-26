@@ -13,24 +13,20 @@ let initialState = {
     { name: "Петриченко", id: 3 },
     { name: "Бондаренко", id: 4 },
   ],
-  newMessageBody: " ",
+  newMessageBody: "",
 };
 
 const messagesesReduser = (state = initialState, action) => {
-  let stateCopy = { ...state, ansver: [...state.ansver] };
-  stateCopy.ansver = [...state.ansver];
   switch (action.type) {
-    case UPDATE_NEW_MESSAGE:
-      return { ...state, newMessageBody: action.body };
-
-    case SEND_MESSAGE:
-      let body = state.newMessageBody;
-
+    case SEND_MESSAGE: {
       return {
         ...state,
-        newMessageBody: "",
-        ansver: [...state.ansver, { a: body }],
+        ansver: [...state.ansver, { a: state.newMessageBody }],
+        newMessageBody: " ",
       };
+    }
+    case UPDATE_NEW_MESSAGE:
+      return { ...state, newMessageBody: action.body };
 
     default:
       return state;

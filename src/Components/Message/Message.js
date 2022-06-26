@@ -25,7 +25,10 @@ let Message = (props) => {
       <div>{ansvers}</div>
       <div>
         {" "}
-        <textarea onChange={messageChange} value={props.newMessageBody} />
+        <textarea
+          onChange={messageChange}
+          value={props.messageses.newMessageBody}
+        />
       </div>
       <div>
         <button onClick={addMessage} id="btn">
