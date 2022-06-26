@@ -1,4 +1,5 @@
-import s from "../Content.module.css";
+import s from "../Contents/Content.module.css";
+
 function New() {
   return <div className={s.h}>ddddd</div>;
 }
