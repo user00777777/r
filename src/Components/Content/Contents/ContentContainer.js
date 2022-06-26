@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import Content from "./Content";
+import Users from "./Users";
 
 let mapStateProps = (state) => {};
-const ContentContainer = connect(mapStateProps)(Content);
+const ContentContainer = connect(mapStateProps)(Users);
 export default ContentContainer;
