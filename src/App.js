@@ -7,7 +7,7 @@ import News from "./Components/Header/News";
 import New from "./Components/Content/New/New";
 import PContainer from "./Components/Content/Profile/PContainer";
 import MessageContainer from "./Components/Message/MessageContainer";
-import UsersContainer from "./Components/Content/Contents/";
+import UsersContainer from "./Components/Content/Contents/UsersContainer";
 
 function App() {
   return (

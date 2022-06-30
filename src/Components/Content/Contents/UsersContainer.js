@@ -3,12 +3,14 @@ import { followAC, setUserAC, unFollowAC } from "../../../redux/user-reduser";
 import Users from "./Users";
 
 let mapStateProps = (state) => {
+  debugger;
   return {
-    users: state.userPage.users,
+    users: state.usersPage.users,
   };
 };
 
 let mapDispatchToProps = (dispatch) => {
+  debugger;
   return {
     follow: (userId) => {
       dispatch(followAC(userId));
